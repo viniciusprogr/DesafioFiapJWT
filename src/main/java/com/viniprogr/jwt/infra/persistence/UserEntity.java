@@ -1,4 +1,4 @@
-package com.viniprogr.jwt.infra.persistence.entities;
+package com.viniprogr.jwt.infra.persistence;
 
 import com.viniprogr.jwt.domain.entities.UserRole;
 import jakarta.persistence.*;

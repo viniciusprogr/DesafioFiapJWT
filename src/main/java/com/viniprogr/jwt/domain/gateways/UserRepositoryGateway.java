@@ -12,4 +12,6 @@ public interface UserRepositoryGateway {
     List<User> findAll();
 
     Optional<User> findById(UUID id);
+
+    Optional<User> findByEmail(String email);
 }

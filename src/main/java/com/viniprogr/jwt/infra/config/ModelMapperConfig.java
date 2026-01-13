@@ -1,4 +1,4 @@
-package com.viniprogr.jwt.config;
+package com.viniprogr.jwt.infra.config;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
