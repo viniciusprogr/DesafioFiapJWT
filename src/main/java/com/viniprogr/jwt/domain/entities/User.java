@@ -6,23 +6,18 @@ import java.util.UUID;
 
 public class User {
 
+
     private Long id;
     private String nome;
     private String email;
     private String senha;
     private UserRole role;
 
-
-    // Construtor para criar um novo usuário (Cadastro)
-    public User( String nome,String email, String senha, UserRole role){
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.role = role;
+    public User() {
     }
 
-    //Construtor para carregar usuário existente do banco
-    public User(Long id, String nome, String email, String senha, UserRole role){
+    // Construtor para criar um novo usuário (Cadastro)
+    public User( Long id, String nome,String email, String senha, UserRole role){
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -30,13 +25,16 @@ public class User {
         this.role = role;
     }
 
-    //Getter e Setters
+    //Getter
+
     public Long getId() {
         return id;
     }
+
     public String getNome() {
         return nome;
     }
+
     public String getEmail() {
         return email;
     }
@@ -44,12 +42,30 @@ public class User {
     public String getSenha() {
         return senha;
     }
+
     public UserRole getRole() {
         return role;
     }
 
-    public void setSenha (String senha) {
+    //Setters
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setSenha(String senha) {
         this.senha = senha;
     }
 
+    public void setRole(UserRole role) {
+        this.role = role;
+    }
 }

@@ -4,6 +4,7 @@ import com.viniprogr.jwt.domain.entities.User;
 import com.viniprogr.jwt.domain.gateways.UserRepositoryGateway;
 
 public class CreateUserUseCase {
+
     private final UserRepositoryGateway userRepositoryGateway;
 
 
@@ -11,13 +12,11 @@ public class CreateUserUseCase {
         this.userRepositoryGateway = userRepositoryGateway;
     }
 
-    public void execute(User user){
+    public User execute(User user){
         if(userRepositoryGateway.findByEmail(user.getEmail()).isPresent()){
-            throw new IllegalArgumentException("Ja existe um usuario com esse e-mail");
+            throw new RuntimeException("E-mail já cadastrado");
         }
 
-        //user.setSenha(passwordEncoder.encode(user.getSenha()));
-
-        userRepositoryGateway.save(user);
+        return userRepositoryGateway.save(user);
     }
 }
