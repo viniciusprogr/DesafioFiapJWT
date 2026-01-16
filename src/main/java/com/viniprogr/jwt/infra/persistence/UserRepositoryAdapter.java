@@ -23,6 +23,7 @@ public class UserRepositoryAdapter implements UserRepositoryGateway {
         this.userMapper = userMapper;
     }
 
+
     @Override
     public User save(User user) {
         UserEntity userEntity = userMapper.toEntity(user);
@@ -36,9 +37,10 @@ public class UserRepositoryAdapter implements UserRepositoryGateway {
     }
 
     @Override
-    public Optional<User> findById(UUID id) {
+    public Optional<User> findById(Long id) {
         return Optional.empty();
     }
+
 
     @Override
     public Optional<User> findByEmail(String email) {
