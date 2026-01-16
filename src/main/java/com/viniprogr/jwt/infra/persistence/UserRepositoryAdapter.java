@@ -23,7 +23,6 @@ public class UserRepositoryAdapter implements UserRepositoryGateway {
         this.userMapper = userMapper;
     }
 
-
     @Override
     public User save(User user) {
         UserEntity userEntity = userMapper.toEntity(user);
